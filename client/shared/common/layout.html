@@ -1,0 +1,56 @@
+<!-- <template name="layout">
+  <div >  
+   <header>
+     {{> yield region='header'}}
+   </header>
+
+  <div>
+    {{> yield}}
+  </div>
+
+   <footer>
+    {{> yield region='footer'}}
+   </footer>
+  </div>
+</template> -->
+
+
+ <template name="layout">
+   {{> header}}
+
+ <div id="wrapper">   
+   <!--  <div class="container" style="width:100%;" >   -->
+    <div class="row"  >
+
+         <!--  {{> errors}} -->
+         <div class="col-md-12">
+
+           <div class="col-md-3">
+              
+
+                {{> leftsidebar}}
+               
+            </div>
+
+             <div class="col-md-9">
+              <div style="width:75%;">
+                <div id="page-content-wrapper">
+                  <div id="main" style="min-height: 400px;">
+                    {{> yield}}
+                  </div>
+                </div>
+               </div>
+            </div>
+
+
+          </div>
+
+   </div>
+
+    <!-- </div> -->
+ </div>
+
+ <footer>
+      {{> yield region='footer'}}
+     </footer>
+</template>
